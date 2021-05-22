@@ -12,5 +12,5 @@ terraform {
 }
 
 module "github" {
-  source  = "./github"
+  source = "./github"
 }
