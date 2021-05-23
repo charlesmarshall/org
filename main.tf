@@ -3,14 +3,11 @@ terraform {
   backend "local" {
     path = "./terraform.tfstate"
   }
-  required_providers {
-    github = {
-      version = "~> 4.9"
-      source  = "integrations/github"
-    }
-  }
+
 }
 
 module "github" {
-  source = "./github"
+  source       = "./github"
+  github_owner = var.github_owner
+  github_token = var.github_token
 }
