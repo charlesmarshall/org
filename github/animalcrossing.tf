@@ -45,6 +45,20 @@ resource "github_repository" "convert" {
 }
 
 
+resource "github_repository" "markdown" {
+  provider               = github.animalcrossing
+  name                   = "markdown"
+  description            = "Generate markdown files from converted data"
+  visibility             = "public"
+  archived               = false
+  auto_init              = true
+  delete_branch_on_merge = true
+  has_downloads          = false
+  has_issues             = false
+  has_projects           = false
+  has_wiki               = false
+}
+
 
 resource "github_repository" "website" {
   provider               = github.animalcrossing
