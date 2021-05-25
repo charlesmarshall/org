@@ -45,10 +45,10 @@ resource "github_repository" "convert" {
 }
 
 
-resource "github_repository" "markdown" {
+resource "github_repository" "posts" {
   provider               = github.animalcrossing
-  name                   = "markdown"
-  description            = "Generate markdown files from converted data"
+  name                   = "posts"
+  description            = "Generate posts (markdown) files from converted data"
   visibility             = "public"
   archived               = false
   auto_init              = true
